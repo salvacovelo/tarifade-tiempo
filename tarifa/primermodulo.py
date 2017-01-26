@@ -7,12 +7,12 @@ from datetime import datetime
 import time
 
 
-time1= datetime.strptime("25/1/2017 8:55", "%d/%m/%Y %H:%M")
-time2= datetime.strptime("25/1/2017 8:59", "%d/%m/%Y %H:%M")
-tiempoDeServicio=[time1,time2]
+#time1= datetime.strptime("25/1/2017 8:55", "%d/%m/%Y %H:%M")
+#time2= datetime.strptime("25/1/2017 8:59", "%d/%m/%Y %H:%M")
+#tiempoDeServicio=[time1,time2]
 
 #tiempoDeServicio=((time2-time1).total_seconds())
-tarifa=2
+#tarifa=2
 def calcularPrecio(tarifa,tiempoDeServicio):
     tiempototal=(tiempoDeServicio[1]-tiempoDeServicio[0]).total_seconds()
     if (tarifa<0):
@@ -30,5 +30,5 @@ def calcularPrecio(tarifa,tiempoDeServicio):
             
     return result 
 
-precio=calcularPrecio(tarifa,tiempoDeServicio)
-print(precio)
+#precio=calcularPrecio(tarifa,tiempoDeServicio)
+#print(precio)
