@@ -15,12 +15,13 @@ class Prueba(unittest.TestCase):
         time1= datetime.strptime("25/1/2017 8:55", "%d/%m/%Y %H:%M")
         time2= datetime.strptime("27/1/2017 8:55", "%d/%m/%Y %H:%M")
         time=[time1,time2]
-        self.assertEqual(calcularPrecio(tarifa,time),95 , "ERROR el resultado no es el esperado")
+        self.assertEqual(calcularPrecio(tarifa,time),96 , "ERROR el resultado no es el esperado")
         ########################################
-        time1= datetime.strptime("25/1/2017 8:55", "%d/%m/%Y %H:%M")
-        time2= datetime.strptime("25/1/2017 8:59", "%d/%m/%Y %H:%M")
+        time1= datetime.strptime("25/1/2017 8:15", "%d/%m/%Y %H:%M")
+        time2= datetime.strptime("25/1/2017 8:20", "%d/%m/%Y %H:%M")
         time=[time1,time2]
-        self.assertEqual(calcularPrecio(tarifa,time),None , "ERROR tiempo de servicio menor a 15 minutos")
+        self.assertEqual(calcularPrecio(tarifa,time),None , "ERROR tiempo de servicio mayor a 15 minutos cuando es menor a 15 minutos")
+        
         
         
 
