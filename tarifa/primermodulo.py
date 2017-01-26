@@ -1,7 +1,7 @@
 '''
 Created on Jan 25, 2017
 
-@author: ungluedsalva
+@author: Salvador Covelo 10-10164
 '''
 from datetime import datetime, date
 import time
