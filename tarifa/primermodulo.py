@@ -27,7 +27,7 @@ def calcularPrecio(tarifa,tiempoDeServicio):
             return None
         else:
             if ((tiempototal/3600)>24*7):
-                print("ERROR tranajo mas de 7 dias")
+                print("ERROR trabajo mas de 7 dias")
                 return None
             else:
                 result=((tiempototal/3600)*tarifa)

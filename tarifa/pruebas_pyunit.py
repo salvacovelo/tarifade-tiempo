@@ -33,10 +33,17 @@ class Prueba(unittest.TestCase):
     def test_tiemposervicio2(self):
         
         time1= datetime.strptime("25/1/2017 8:55", "%d/%m/%Y %H:%M")
-        time2= datetime.strptime("27/1/2017 8:55", "%d/%m/%Y %H:%M")
+        time2= datetime.strptime("29/1/2017 8:55", "%d/%m/%Y %H:%M")
         time=[time1,time2]
-        self.assertEqual(calcularPrecio(tarifa,time),96 , "ERROR el resultado no es el esperado")
-               
+        self.assertEqual(calcularPrecio(tarifa,time),192 , "ERROR el resultado no es el esperado")
+            
+    def test_tiemposervicioMayorA7Dias(self):
+        
+        time1= datetime.strptime("25/1/2017 8:55", "%d/%m/%Y %H:%M")
+        time2= datetime.strptime("22/2/2017 8:55", "%d/%m/%Y %H:%M")
+        time=[time1,time2]
+        self.assertEqual(calcularPrecio(tarifa,time),None , "ERROR el resultado no es el esperado")
+                              
                 
         
 
