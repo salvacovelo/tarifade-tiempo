@@ -21,12 +21,16 @@ def calcularPrecio(tarifa,tiempoDeServicio):
         
     else: 
         if((tiempototal/60)<15):
-            print(tiempototal/60)
+            #print(tiempototal/60)
 
             print("ERROR no cumple el minimo de tiempo")
             return None
         else:
-            result=((tiempototal/3600)*tarifa)
+            if ((tiempototal/3600)>24*7):
+                print("ERROR tranajo mas de 7 dias")
+                return None
+            else:
+                result=((tiempototal/3600)*tarifa)
             
     return result 
 
