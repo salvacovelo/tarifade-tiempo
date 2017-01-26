@@ -33,6 +33,3 @@ def calcularPrecio(tarifa,tiempoDeServicio):
                 result=((tiempototal/3600)*tarifa)
             
     return result 
-
-#precio=calcularPrecio(tarifa,tiempoDeServicio)
-#print(precio)
